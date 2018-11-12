@@ -3775,6 +3775,7 @@ class ComposerStaticInitc8052dd3b023360b16a8ef218a974d57
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'saboresTableSeeder' => __DIR__ . '/../..' . '/database/seeds/saboresTableSeeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -11,12 +11,12 @@ class AddSaboresTable extends Migration
      *
      * @return void
      */
-    public function up(Blueprint $table) {
+    public function up() {
         
         Schema::create('sabores', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('titulo');
-                $table->string('descrição');
+                $table->string('descricao');
                 $table->float('valor', 8, 2);
                 $table->timestamps();
         });
