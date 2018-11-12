@@ -15,17 +15,19 @@ class AddPedidosTable extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->integer('tipo_id')->unsigned();
-            $table->integer('sabor1_id')->unsigned();
-            $table->integer('sabor2_id')->unsigned();
-            $table->integer('sabor3_id')->unsigned();
-            $table->integer('sabor4_id')->unsigned();
-            $table->integer('sabor5_id')->unsigned();
+            $table->integer('sabor1_id')->unsigned()->nullable();
+            $table->integer('sabor2_id')->unsigned()->nullable();
+            $table->integer('sabor3_id')->unsigned()->nullable();
+            $table->integer('sabor4_id')->unsigned()->nullable();
+            $table->integer('sabor5_id')->unsigned()->nullable();
             $table->float('valorTotal', 8, 2);
             $table->timestamps();
         });
 
         Schema::table('pedidos', function($table){
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('tipo_id')->references('id')->on('tipos');
             $table->foreign('sabor1_id')->references('id')->on('sabores');
             $table->foreign('sabor2_id')->references('id')->on('sabores');
