@@ -12,15 +12,15 @@ class AddSaboresTable extends Migration
      * @return void
      */
     public function up(Blueprint $table) {
-        $table->string('titulo');
-        $table->string('descrição');
-        $table->string('id');
-    }
-    
-    {
-        Schema::table('sabores', function (Blueprint $table) {
-            //
+        
+        Schema::create('sabores', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('titulo');
+                $table->string('descrição');
+                $table->float('valor', 8, 2);
+                $table->timestamps();
         });
+
     }
 
     /**
