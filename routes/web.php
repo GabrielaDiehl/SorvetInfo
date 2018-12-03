@@ -20,3 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/sabores', 'saboresController@index');
+Route::get('/tipos', 'tiposController@index');
+Route::get('/pedidos', 'peididoController@index');
+
+
+Route::get('/pedidos/create','peididoController@create');
+Route::post('/pedidos','peididoController@store');

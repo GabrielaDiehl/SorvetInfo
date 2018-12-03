@@ -13,15 +13,34 @@ class saboresTableSeeder extends Seeder
     public function run()
     {
         Sabor::create([
-        	'titulo' => 'Morango',
-        	'descricao' => 'sabor de morango',
+        	'titulo' => 'Java',
+        	'descricao' => 'sorvete sabor morango',
         	'valor' => 2.00
         ]);
 
         Sabor::create([
-        	'titulo' => 'Chocolate Branco',
-        	'descricao' => 'Chocolate Galak',
+        	'titulo' => 'Linux',
+        	'descricao' => 'sorvete sabor chocolate',
+        	'valor' => 2.00
+        ]);
+
+ 		Sabor::create([
+        	'titulo' => 'Html',
+        	'descricao' => 'sorvete sabor flocos',
+        	'valor' => 3.00
+        ]);
+
+   		Sabor::create([
+        	'titulo' => 'C++',
+        	'descricao' => 'sorvete sabor café',
         	'valor' => 4.00
         ]);
+        
+     	Sabor::create([
+        	'titulo' => 'PHP',
+        	'descricao' => 'sorvete sabor maracujá',
+        	'valor' => 4.00
+        ]);
+      
     }
 }

@@ -21,5 +21,10 @@ class tipoTableSeeder extends Seeder
         	'desc' => "cascão",
         	'valor' => 5.00
         ]);
+
+        Tipo::create([
+            'desc' => "potinho",
+            'valor' => 6.00
+        ]);
     }
 }
